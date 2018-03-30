@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}	
+
+	<h1>costam</h1>
+	<form method="GET" action="">
+		<input type="text" placeholder="..." name="q" value="{{ request.GET.q }}" />
+		<input type="submit" value="Wyszukaj"/>
+		<br/>
+	{% for obj in object_list %}
+
+	<a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a><br/>
+	{{ obj.content|linebreaks }} <br/>
+	{{ obj.timestamp }} <br/>
+	{{ obj.id }} <br/>
+
+	{% endfor %}
+
+{% endblock content %}	

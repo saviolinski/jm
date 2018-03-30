@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}	
+
+	<h1>costam</h1>
+
+	{% for obj in object_list %}
+
+	<a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a><br/>
+	{{ obj.content|safe|truncatechars_html:12 }} <br/>
+	{{ obj.timestamp }} <br/>
+	{{ obj.id }} <br/>
+
+	{% endfor %}
+
+
+
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+    $("h2").css({"text-align": "left" });
+});
+</script>
+{% endblock content %}	

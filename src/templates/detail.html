@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block head_title %}Stronka jm | {{ post.title }}{% endblock head_title %}
+
+{% block content %}	
+  <h1>{{ post.title }}</h1>
+  <h3>{{post.timestamp}}</h3>
+  {{post.timestamp|timesince}}
+  {{ post.content|safe }}
+  
+  <div class="fb-comments" data-href="{{ request.build_absolute_uri}}" data-numposts="5"></div>
+{% endblock content %}
