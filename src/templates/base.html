@@ -5,6 +5,7 @@
 {% endblock head %}
 	<title>{% block head_title %}Stronka jm{% endblock head_title %}</title>
 	<link rel="stylesheet" href='{% static "/css/base.css" %}' />
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>	
 <body>
@@ -18,7 +19,26 @@
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<div class="container">
+
+	<section class="home-hero">
+		<header>
+			<img src='{% static "/img/jmllogo1.png" %}' alt="JML logo" class="logo">
+			<nav>
+				<ul>
+					<li><a href="">Artykuły</a></li>
+					<li><a href="">FAQ</a></li>
+					<li><a href="">O mnie</a></li>
+					<li><a href="">Kontakt</a></li>
+				</ul>
+			</nav>
+		</header>	
+	</section>
+
+
+
+
+	<div class="wrapper">
+
 	{% block content %}	
 	{% endblock content %}	
 	</div>

@@ -1,3 +1,141 @@
-h1 {
-	/*color: red;*/
+{% load staticfiles %}
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Vars*/
+:root {
+	--primary: #000;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	color: var(--dark);
+}
+
+body {
+	margin: 0px;
+	line-height: 1.4;
+
+}
+
+img {
+	max-width: 100%;
+}
+
+/*.nav-white {
+	background-color: white;
+	z-index: 20;
+}*/
+
+.wrapper {
+	display: grid;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.home-hero {
+	position: relative;
+	background-image: url('../img/wood-cube.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 18vh;
+	margin-bottom: 5vh;
+}
+
+header {
+	height: 50px;
+	width: 1200px;
+	background-color: #ffffffab;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	border-radius: 0px 0px 25px 25px;
+}
+
+.logo {
+	display: grid;
+	width: 90px;
+	padding-top: 8px;
+	padding-left: 22px;
+	float: left;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	padding-right: 12px;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin: 1em;
+}
+
+nav a {
+	font-weight: 900;
+	text-decoration: none;
+	padding: .5em;
+	text-transform: uppercase;
+	color: #463b3b;
+	font-size: .85rem;
+}
+
+
+
+
+
