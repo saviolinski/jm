@@ -1,5 +1,5 @@
 {% load staticfiles %}
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 /*RESET*/
 html, body, div, span, applet, object, iframe,
@@ -47,7 +47,7 @@ table {
 
 /*Vars*/
 :root {
-	--primary: #000;
+	--primary: #463b3b;
 	--dark: #333;
 	--light: #fff;
 	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
@@ -55,15 +55,15 @@ table {
 
 html {
 	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	color: var(--dark);
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: var(--primary);
 }
 
 body {
 	margin: 0px;
 	line-height: 1.4;
-
 }
 
 img {
@@ -77,8 +77,6 @@ img {
 
 .wrapper {
 	display: grid;
-	max-width: 1200px;
-	margin: 0 auto;
 }
 
 .home-hero {
@@ -87,7 +85,6 @@ img {
 	background-size: cover;
 	background-position: center;
 	height: 18vh;
-	margin-bottom: 5vh;
 }
 
 header {
@@ -135,7 +132,119 @@ nav a {
 	font-size: .85rem;
 }
 
+.introduction {
+
+}
+
+.bar {
+	display: grid;
+	text-align: center;
+	background-color: #e8e2db;
+	width: 100%;
+	height: 5.5vh;
+	border-radius: 0px 0px 25px 25px;
+	border-bottom: solid 1px #c5bdb9;
+	border-top: solid 1px #c5bdb9;
+	align-content: center;
+	font-weight: 900;
+	font-size: 1.3rem;
+	/*text-transform: uppercase;*/
+}
+.bar h1 {
+	border-bottom: solid 1px;
+	width: 10vw;
+	margin: 0 auto;
+}
+
+.container-1 {
+	display: grid;
+	text-align: center;
+	align-content: center;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr;
+	height: 40vh;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10vh 0vh;
+/*	grid-template-areas:
+		' mon mon mon'
+		'spec1 spec2 spec3';*/
+
+}
 
 
+.foto {
+	background-image: url('../img/portrait.jpeg');
+	background-size: cover;
+	background-position: center;
+	border-radius: 2%;
+}
 
+.opis {
+	padding: 0vw 6vw;
+}
 
+.opis h1 {
+	font-size: 1.3rem;
+	margin-top: -15px;
+}
+.opis h3 {
+	padding-bottom: 1rem;
+}
+
+.container-2 {
+	display: grid;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.bar.pytania {
+	border-radius: 0px;
+	margin-bottom: 3px;
+
+}
+
+.bar.pytania h1 {
+	border-bottom: solid 1px;
+	margin: 0 auto;
+	width: 30vw;
+}
+
+.qa {
+	margin-bottom: 3px;
+}
+
+.question {
+	display: grid;
+	align-content: center;
+	text-align: center;
+	height: 5vh;
+	padding: 0px 20px;
+	background-color: #ececec;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	transition: all ease-in-out 200ms;
+}
+
+.question:hover {
+	background-color: #463b3b;
+	color: white;
+	transition: 
+}
+
+.answer {
+	text-align: center;
+	margin-top: -3px;
+	border-right:  solid 1px #ececec;
+	border-bottom: solid 1px #ececec;
+	border-left:   solid 1px #ececec;
+	border-radius: 0px 0px 25px 25px;
+	display: none;
+	padding: 20px;
+}
+
+.question.active {
+	background-color: #463b3b;
+	color: white;
+}
