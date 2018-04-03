@@ -165,7 +165,7 @@ nav a {
 	height: 40vh;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 10vh 0vh;
+	padding: 15.3vh 0vh;
 /*	grid-template-areas:
 		' mon mon mon'
 		'spec1 spec2 spec3';*/
@@ -192,10 +192,18 @@ nav a {
 	padding-bottom: 1rem;
 }
 
+.faq {
+	background-image: url('https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg');
+	background-size: cover;
+	background-position: center;
+
+}
+
 .container-2 {
 	display: grid;
 	width: 1200px;
-	margin: 0 auto;
+	margin: 2vh auto;
+
 }
 
 .bar.pytania {
@@ -211,18 +219,21 @@ nav a {
 }
 
 .qa {
-	margin-bottom: 3px;
+	/*margin-bottom: 3px;*/
+	/*margin:2vh auto;*/
+	padding: 2vh;
 }
 
 .question {
 	display: grid;
 	align-content: center;
 	text-align: center;
-	height: 5vh;
+	height: 7vh;
 	padding: 0px 20px;
 	background-color: #ececec;
 	border-radius: 5px;
 	text-align: center;
+	font-size: 1.1rem;
 	cursor: pointer;
 	transition: all ease-in-out 200ms;
 }
@@ -247,4 +258,36 @@ nav a {
 .question.active {
 	background-color: #463b3b;
 	color: white;
+}
+
+.bar.artykuly {
+	border-radius: 0px;
+}
+
+.container-3 {
+	display: grid;
+	width: 1200px;
+	margin: 2vh auto;
+}
+
+.container-3 h5 {
+	/*text-align: right;*/
+	font-weight: 400;
+}
+
+.article {
+	padding: 2vh 0vh;
+}
+
+.article p {
+	/*white-space: nowrap;*/
+}
+
+.art-title {
+	font-size: 1.3rem;
+	padding: 1vh 0vh;
+}
+
+.art-title a{
+	color: #44316f;
 }

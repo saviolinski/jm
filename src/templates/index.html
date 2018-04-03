@@ -51,15 +51,22 @@
 		</div>
 	</div>
 </section>
-
-	{% for obj in object_list %}
-
-	<a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a><br/>
-	{{ obj.content|safe|truncatechars_html:240 }} <br/>
-	{{ obj.timestamp }} <br/> 
+<section class="articles">
+	<div class="bar artykuly">
+		<h1>Artykuły</h1>
+	</div>
+	<div class="container-3">
+		{% for obj in object_list %}
+		<div class="article">
+			<h5>{{ obj.timestamp }}</h5>
+			<div class="art-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a></div>
+			<p>{{ obj.content|safe|truncatechars_html:500 }}</p>
+		</div>
 
 	{% endfor %}
-
+	</div>
+	
+</section>
 
 
 

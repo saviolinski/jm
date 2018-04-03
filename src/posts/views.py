@@ -43,7 +43,7 @@ def posts_list(request):
 	return render(request, "post_list.html", context)
 
 def index(request):
-	queryset = Post.objects.all()[:5] #.order_by("-timestamp")
+	queryset = Post.objects.all()[:3] #.order_by("-timestamp")
 	context = {
 		"object_list": queryset
 	}
