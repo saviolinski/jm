@@ -202,7 +202,8 @@ nav a {
 .container-2 {
 	display: grid;
 	width: 1200px;
-	margin: 2vh auto;
+	margin: 10vh auto;
+	/*margin-bottom: 10vh;*/
 
 }
 
@@ -221,7 +222,7 @@ nav a {
 .qa {
 	/*margin-bottom: 3px;*/
 	/*margin:2vh auto;*/
-	padding: 2vh;
+	padding: 1.5vh;
 }
 
 .question {
@@ -267,12 +268,68 @@ nav a {
 .container-3 {
 	display: grid;
 	width: 1200px;
-	margin: 2vh auto;
+	margin: 0vh auto;
 }
 
 .container-3 h5 {
 	/*text-align: right;*/
 	font-weight: 400;
+}
+
+.searchbar {
+	position: relative;
+	margin: 2vh auto;
+	padding-bottom: 5vh;
+}
+.searchtext-style {
+	position: relative;
+	border: solid 2px #ececec;
+	border-radius: 25px;
+	height: 40px;
+	width: 25vw;
+	font-size: 1.3rem;
+}
+
+.searchtext input {
+	height: 40px;
+}
+
+input[type=text] {
+	position: absolute;
+	/*margin: 0 auto;*/
+	top: 0;
+	left: 7%;
+	border: 0px;
+	height: 40px;
+	width: 20vw;
+	font-size: 1.2rem;
+}
+
+
+button[type=submit] {
+	position: absolute;
+	background-color: #e8e2db;
+	border: 0px;
+	border-radius: 50%;
+	height: 42px;
+	width: 42px;
+	top: 0;
+	right: 0;
+}
+
+button[type=submit]:hover {
+
+}
+
+button.searchbutton {
+	cursor: pointer;
+	background-color: #e8e2db;
+	color: white;
+}
+
+.fa-2x {
+	font-size: 1.7em;
+	color: #463b3b;
 }
 
 .article {

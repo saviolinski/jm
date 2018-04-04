@@ -6,6 +6,7 @@
 		<input type="text" placeholder="..." name="q" value="{{ request.GET.q }}" />
 		<input type="submit" value="Wyszukaj"/>
 		<br/>
+	</form>
 	{% for obj in object_list %}
 
 	<a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a><br/>
