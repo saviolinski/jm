@@ -1,19 +1,21 @@
-{% extends "base.html" %}
-{% block content %}	
+{% load el_pagination_tags %}
 
-	<h1>costam</h1>
-	<form method="GET" action="">
-		<input type="text" placeholder="..." name="q" value="{{ request.GET.q }}" />
-		<input type="submit" value="Wyszukaj"/>
-		<br/>
-	</form>
+ 	{% paginate 3 object_list %}	
 	{% for obj in object_list %}
+		<div class="article">
+			<h5>{{ obj.timestamp }}</h5>
+			<div class="art-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a></div>
+			<p>{{ obj.content|safe|truncatechars_html:500 }}</p>
+		</div>
 
-	<a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a><br/>
-	{{ obj.content|linebreaks }} <br/>
-	{{ obj.timestamp }} <br/>
-	{{ obj.id }} <br/>
-
+		<script>
+			$(".endless_container").hover(function(){
+		    	$("a.endless_more").css({"color": "#463b3b"});
+		    	$(".endless_container").css({"background-color": "white"});
+		    }, function(){
+		    	$("a.endless_more").css({"color": "white"});
+		    	$(".endless_container").css({"background-color": "#463b3b"});
+		    });
+		</script>
 	{% endfor %}
-
-{% endblock content %}	
+	{% show_more "Więcej wyników" "ładowanie" %}

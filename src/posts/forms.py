@@ -7,7 +7,8 @@ from tinymce.widgets import TinyMCE
 
 
 class PostForm(forms.ModelForm):
-	content = forms.CharField(widget=TinyMCE(attrs={'cols': 200, 'rows': 300}))
+	content = forms.CharField(label="",widget=TinyMCE(attrs={'cols': 200, 'rows': 300}))
+	title = forms.CharField(max_length=300, label="Tytul")
 	class Meta:
 		model = Post
 		fields = [

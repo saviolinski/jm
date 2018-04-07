@@ -2,10 +2,40 @@
 {% block head_title %}Stronka jm | {{ post.title }}{% endblock head_title %}
 
 {% block content %}	
-  <h1>{{ post.title }}</h1>
-  <h3>{{post.timestamp}}</h3>
-  {{post.timestamp|timesince}}
-  {{ post.content|safe }}
+
+<section class="home-hero">
+	<header>
+		<p class="logo">Jowita Michalska</p>
+		<nav>
+			<ul>
+				<li><a class="scroll" href="../#omnie">O mnie</a></li>
+				<li><a class="scroll" href="../#faq">FAQ</a></li>
+				<li><a class="scroll" href="../#artykuly">Artykuły</a></li>
+				<li><a class="scroll" href="../#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
+	</header>	
+</section>
+
+<section class="article-det">
+	<div class="bar artykul-det"></div>
+	<div class="artykul-content">
+		<h1 class="det-title">{{post.title}}</h1>
+  <h3 class="det-timestamp">{{post.timestamp}}</h3>
+  <!-- {{post.timestamp|timesince}} -->
+  {{ post.content|safe|linebreaks }}
   
-  <div class="fb-comments" data-href="{{ request.build_absolute_uri}}" data-numposts="5"></div>
+<div class="fb-comments" data-href="{{ request.build_absolute_uri}}" data-numposts="5" data-width="100%"></div>
+	</div>
+  
+
+
+</section>
+
+<script>
+$( document ).ready(function() {
+    $("img").css({"width": "auto", "height": "auto"});
+});
+
+</script>
 {% endblock content %}

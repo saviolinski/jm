@@ -1,13 +1,14 @@
 {% load staticfiles %}
 <html>
 <head>
-{% block head %} 
-{% endblock head %}
+
 	<title>{% block head_title %}Stronka jm{% endblock head_title %}</title>
 	<link rel="stylesheet" href='{% static "/css/base.css" %}' />
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
+{% block head %} 
+{% endblock head %}
 </head>	
 <body>
 	<div id="fb-root"></div>
@@ -21,30 +22,37 @@
 	</script>
 
 
-	<section class="home-hero">
-		<header>
-			<a href="/"><img src='{% static "/img/logo2.png" %}' alt="JML logo" class="logo"></a>
-			<nav>
-				<ul>
-					<li><a href="">O mnie</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Artykuły</a></li>
-					<li><a href="">Kontakt</a></li>
-				</ul>
-			</nav>
-		</header>	
-	</section>
 
-
-
-
-	<div class="wrapper">
 
 	{% block content %}	
 	{% endblock content %}	
 	</div>
 
+	<section class="footer" id="kontakt">
+		<div class="bar ftr"></div>
+		<div class="container-4">
+			<div class="info">
+				<i class="far fa-comment-alt fa-3x logo-ft"></i>
+				<!-- <img src='{% static "/img/logo-light.png" %}' alt="JML logo" class="logo-ft"> -->
+				<p class="ft-name">Jowita Michalska</p>
+				<p>Logopeda</p>
+			</div>
+			<div class="contacts">
+				<div class="phone con-grid">
+					<i class="fas fa-phone fa-2x ico"></i> <p>+48 555 444 777</p>
+				</div>
+				<div class="facebook con-grid">
+					<i class="fab fa-facebook-square fa-2x ico"></i> <p>jowitamichalskalogopedia</p>
+				</div>
+				<div class="mail con-grid">
+					<i class="fas fa-envelope fa-2x ico"></i> <p>jowita.michalska@gmail.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="blackbar"></div>
+	</section>
 
 </body>
+
 
 </html>
