@@ -307,17 +307,14 @@ nav a:hover {
 	height: 40px;
 }
 
-.searchtext input[type=text] {
+#search-landing {
 	position: absolute;
-	/*margin: 0 auto;*/
-	top: 0;
-	left: 7%;
+	left: 5%;
 	border: 0px;
 	height: 40px;
 	width: 20vw;
 	font-size: 1.2rem;
 }
-
 
 button[type=submit] {
 	position: absolute;
@@ -494,6 +491,7 @@ img {
 
 textarea:focus, input:focus{
     outline: none;
+    border:none;
 }
 
 .container-form {
@@ -508,6 +506,11 @@ textarea:focus, input:focus{
 	height: 2.5vh; 
 	border-radius: 0px;
 } 
+
+label {
+	padding: 10px;
+	font-size: 1.2rem;
+}
 
 input#id_title {
 	width: 70%;
@@ -537,6 +540,71 @@ input.article-button {
 input.article-button:hover {
 	color: #e8e2db;
 	background-color: #463b3b;
+	border: 2px solid #463b3b;
+	cursor: pointer;
+}
+
+/* article delete */
+
+.delete-art {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.del-t  {
+	font-size: 1.7rem;
+}
+.del-question {
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.del-title {
+	font-size: 1.2rem;
+}
+.del-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+input.delete-button {
+	color: #463b3b;
+	background-color: #e8e2db;
+	border: 2px solid #463b3b;
+	margin-top: 5vh;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 2rem;
+	border-radius: 25px;
+	letter-spacing: 2px
+	height: 50px;
+	width: 100px;
+}
+input.delete-button:hover {
+	color: #e8e2db;
+	background-color: #463b3b;
+	border: 2px solid #463b3b;
+	cursor: pointer;
+}
+
+.del-cancel {
+	color: #463b3b;
+	background-color: #f7cfcf;
+	border: 2px solid #463b3b;
+	margin-top: 5vh;
+	margin-left: 5px;
+	font-weight: 700;
+	font-size: 1rem;
+	text-transform: uppercase;
+	line-height: 2rem;
+	border-radius: 25px;
+	width: 100px;
+}
+
+.del-cancel:hover {
+	color: white;
+	background-color: #e44444;
 	border: 2px solid #463b3b;
 	cursor: pointer;
 }
