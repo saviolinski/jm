@@ -112,6 +112,8 @@ header {
 	padding-left: 30px;
 	float: left;
 	align-self: center;
+	text-decoration: none;
+	color: black;
 }
 
 nav {
@@ -143,8 +145,29 @@ nav a:hover {
 	color: #80766c;
 }
 
-.introduction {
+.napisz {
+	color: #864141;
+}
 
+.goup {
+	display: none;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	right: 5vw;
+	width: 60px;
+	height: 30px;
+	background-color: #1b1010;
+	color: white;
+	border: solid 3px #c5bdb9;
+	border-bottom: none;
+	border-radius: 25px 25px 0 0;
+	cursor: pointer;
+}
+
+#go-up {
+	color: white;
+	margin: auto;
 }
 
 .bar {
@@ -177,9 +200,7 @@ nav a:hover {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 15.3vh 0vh;
-/*	grid-template-areas:
-		' mon mon mon'
-		'spec1 spec2 spec3';*/
+
 
 }
 
@@ -460,11 +481,36 @@ box-sizing: border-box;
 	border-radius: 0px;
 } 
 .artykul-content {
+	position: relative;
 	width: 1200px;
 	display: grid;
 	margin: 5vh auto;
 }
+.afterlogbut {
+	position: absolute;
+	font-size: 0.9rem;
+	font-weight: 500;
+	right: 10vw;
+	padding: 0px 7px;
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 2px solid #c5bdb9;
+}
 
+.det-del {
+	top: 22vh;
+	background-color: #d86c5d;
+}
+
+.det-del:hover {
+	background-color: #c32727;
+} 
+
+.det-edit {
+	top: 26vh;
+	background-color: #d86c5d;
+}
 img {
 	display: grid;
 }

@@ -20,14 +20,13 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
-
-
-
+	
+	<div class="scroll goup"><i class="fas fa-angle-up fa-2x" id="go-up"></i></div>
 
 	{% block content %}	
 	{% endblock content %}	
 	</div>
-
+	
 	<section class="footer" id="kontakt">
 		<div class="bar ftr"></div>
 		<div class="container-4">
@@ -52,6 +51,34 @@
 		<div class="blackbar"></div>
 	</section>
 
+
+<script>
+	var scrollLink = $('.scroll');
+	$(".goup").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#very-top").offset().top
+    }, 700);
+	});
+
+	// Smooth scrolling
+	// scrollLink.click(function(e) {
+	// e.preventDefault();
+	// $('body,html').animate({
+	//   scrollTop: $(this.hash).offset().top
+	// }, 700 );
+	// });	
+
+
+	$(window).scroll(function(){
+		const $heroSection = $('#anch');
+		const $heroOffset = $heroSection.offset().top;
+		if($(this).scrollTop()>=$heroOffset){
+			$('.goup').slideDown();
+    	} else {
+    		$('.goup').slideUp();
+    	}
+});
+</script>
 </body>
 
 

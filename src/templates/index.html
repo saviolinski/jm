@@ -7,11 +7,14 @@
 
 {% block content %}	
 
-	<section class="home-hero">
+	<section class="home-hero" id="very-top">
 		<header>
-			<p class="logo">Jowita Michalska</p>
+			<a class="logo" href="/">Jowita Michalska</a>
 			<nav>
 				<ul>
+					{% if request.user.is_authenticated %}
+					<li><a class="napisz" href="/create">Napisz artykuł</a></li>
+					{% endif %}
 					<li><a class="scroll" href="#omnie">O mnie</a></li>
 					<li><a class="scroll" href="#faq">FAQ</a></li>
 					<li><a class="scroll" href="#artykuly">Artykuły</a></li>
@@ -27,7 +30,7 @@
 <div class="wrapper">
 
 <section class="introduction">
-	<div class="bar omnie" id="omnie">
+	<div class="bar omnie" id="anch">
 		<h1>O mnie</h1>
 	</div>
 	<div class="container-1">
@@ -119,16 +122,6 @@ $( document ).ready(function() {
     	$(".searchbutton").css({"background-color": "#e8e2db"});
     	$(".fa-2x").css({"color": "#463b3b"});
     });
-
-	var scrollLink = $('.scroll');
-
-	// Smooth scrolling
-	scrollLink.click(function(e) {
-	e.preventDefault();
-	$('body,html').animate({
-	  scrollTop: $(this.hash).offset().top
-	}, 1000 );
-	});
 
 });
 

@@ -6,9 +6,9 @@
 
 {% block content %}	
 
-<section class="home-hero">
+<section class="home-hero" id="very-top">
 	<header>
-		<p class="logo">Jowita Michalska</p>
+		<a class="logo" href="/">Jowita Michalska</a>
 		<nav>
 			<ul>
 				<li><a class="scroll" href="../#omnie">O mnie</a></li>
@@ -20,7 +20,7 @@
 	</header>	
 </section>
 
-<section class="article-section">
+<section class="article-section" id="anch">
 	<div class="bar artykul-form"></div>
 	<div class="container-form">
 		<form method="POST" action=""> {% csrf_token%}
