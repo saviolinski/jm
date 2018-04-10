@@ -8,10 +8,10 @@
 		<a class="logo" href="/">Jowita Michalska</a>
 		<nav>
 			<ul>
-				<li><a class="scroll" href="../#omnie">O mnie</a></li>
-				<li><a class="scroll" href="../#faq">FAQ</a></li>
-				<li><a class="scroll" href="../#artykuly">Artykuły</a></li>
-				<li><a class="scroll" href="../#kontakt">Kontakt</a></li>
+				<li><a href="../#omnie">O mnie</a></li>
+				<li><a href="../#faq">FAQ</a></li>
+				<li><a href="../#artykuly">Artykuły</a></li>
+				<li><a class="scroll" href="#kontakt">Kontakt</a></li>
 			</ul>
 		</nav>
 	</header>	
@@ -20,8 +20,12 @@
 <section class="article-det" id="anch">
 	<div class="bar artykul-det">
 		{% if request.user.is_authenticated %}
-		<div class="afterlogbut det-del">Usuń artykuł</div>
-		<div class="afterlogbut det-edit">Edytuj artykuł</div>
+		<div class="shrinkbut">
+			<div class="blockbutt">	
+				<div class="afterlogbut det-del">Usuń artykuł</div>
+				<div class="afterlogbut det-edit">Edytuj artykuł</div>
+			</div>
+		</div>
 		{% endif %}
 	</div>
 	<div class="artykul-content">
@@ -43,6 +47,9 @@ $( document ).ready(function() {
     $("img").css({"width": "auto", "height": "auto"});
     $('.det-del').click(function(){
    window.location.href='{{post.get_absolute_url}}delete';
+	})
+	$('.det-edit').click(function(){
+   window.location.href='{{post.get_absolute_url}}edit';
 	})
 });
 

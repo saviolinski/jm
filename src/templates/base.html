@@ -12,13 +12,15 @@
 </head>	
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<script>
+	  (function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
 	  js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.12';
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
+
 	</script>
 	
 	<div class="scroll goup"><i class="fas fa-angle-up fa-2x" id="go-up"></i></div>
@@ -61,13 +63,12 @@
 	});
 
 	// Smooth scrolling
-	// scrollLink.click(function(e) {
-	// e.preventDefault();
-	// $('body,html').animate({
-	//   scrollTop: $(this.hash).offset().top
-	// }, 700 );
-	// });	
-
+	scrollLink.click(function(e) {
+	e.preventDefault();
+	$('body,html').animate({
+	  scrollTop: $(this.hash).offset().top
+	}, 700 );
+	});	
 
 	$(window).scroll(function(){
 		const $heroSection = $('#anch');
@@ -78,7 +79,10 @@
     		$('.goup').slideUp();
     	}
 });
+    
+
 </script>
+
 </body>
 
 

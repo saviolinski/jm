@@ -486,20 +486,29 @@ box-sizing: border-box;
 	display: grid;
 	margin: 5vh auto;
 }
-.afterlogbut {
+.shrinkbut {
 	position: absolute;
-	font-size: 0.9rem;
+	margin: auto;
+	right:0;
+	left: 0;
+}
+.blockbutt {
+display: flex;
+margin-left: 17%;
+}
+
+.afterlogbut {
+	font-size: 1rem;
 	font-weight: 500;
-	right: 10vw;
 	padding: 0px 7px;
+	margin: 0px 2px;
 	color: white;
-	border-radius: 10px;
+	border-radius: 5px;
 	cursor: pointer;
-	border: 2px solid #c5bdb9;
+	/*border: 2px solid #c5bdb9;*/
 }
 
 .det-del {
-	top: 22vh;
 	background-color: #d86c5d;
 }
 
@@ -508,8 +517,10 @@ box-sizing: border-box;
 } 
 
 .det-edit {
-	top: 26vh;
-	background-color: #d86c5d;
+	background-color: #4b9857;
+}
+.det-edit:hover {
+	background-color: #32713c;
 }
 img {
 	display: grid;
@@ -532,8 +543,6 @@ img {
 }
 
 /* article form */
-
-
 
 textarea:focus, input:focus{
     outline: none;
@@ -565,7 +574,6 @@ input#id_title {
 	text-align: center;
 	margin: 7vh auto;
 	padding: 1vh;
-
 }
 
 input.article-button {
