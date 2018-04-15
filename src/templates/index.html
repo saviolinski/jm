@@ -84,31 +84,82 @@
 	</div>
 	<div class="container-3">
 		<div class="searchbar">	
-			<form method="GET" action="">
+			<form method="GET" action="#artykuly" id="ajax-search">
 				<div class="searchtext-style">
 					<input type="text" placeholder="" name="q" value="{{ request.GET.q }}" class="searchtext" id="search-landing"/>
 				</div>
-				<button class="searchbutton" type="submit"> <i class="fa fa-search fa-2x"></i></button>
+				<button class="searchbutton" id="button-ajax" type="submit"> <i class="fa fa-search fa-2x"></i></button>
 			</form>
 		</div>
 
-			
+			<div id="ajax-container">
 {% load el_pagination_tags %}
 
 {% include page_template %}
 
 
-
+			</div>	
 		</div>
 	
 </section>
 
 
 
-<script type="text/javascript">
-  			
+<script>
+
+
+  
+
+
+
 $( document ).ready(function() {
-    $("h2").css({"text-align": "left"});
+
+	 	$('#button-ajax').click(function (event){
+ 		
+ 		event.preventDefault();
+ 		loadText();
+    	function loadText(){
+    	var query = $("#search-landing").val();
+      // Create XHR Object
+      var xhr = new XMLHttpRequest();
+      // OPEN - type, url/file, async
+      xhr.open('GET', '/artykuly/?q='+query, true);
+      console.log(query);
+      console.log('READYSTATE: ', xhr.readyState);
+
+      // OPTIONAL - used for loaders
+      xhr.onprogress = function(){
+        console.log('READYSTATE: ', xhr.readyState);
+      }
+
+      xhr.onload = function(){
+        console.log('READYSTATE: ', xhr.readyState);
+        if(this.status == 200){
+          //console.log(this.responseText);
+          document.getElementById('ajax-container').innerHTML = this.responseText;
+        } else if(this.status = 404){
+          document.getElementById('ajax-container').innerHTML = 'Not Found';
+        }
+      }
+
+      xhr.onerror = function(){
+        console.log('Request Error...');
+      }
+
+      // xhr.onreadystatechange = function(){
+      //   console.log('READYSTATE: ', xhr.readyState);
+      //   if(this.readyState == 4 && this.status == 200){
+      //     //console.log(this.responseText);
+      //   }
+      // }
+
+      // Sends request
+      xhr.send();
+    }
+
+	});
+
+	$("h2").css({"text-align": "left"});
     $(".qa").click(function(){
     	$(this).find('.answer').slideToggle("slow");
 	});
@@ -117,10 +168,10 @@ $( document ).ready(function() {
 	});
 	$(".searchbutton").hover(function(){
     	$(".searchbutton").css({"background-color": "#463b3b"});
-    	$(".fa-2x").css({"color": "white"});
+    	$(".fa-search").css({"color": "white"});
     }, function(){
     	$(".searchbutton").css({"background-color": "#e8e2db"});
-    	$(".fa-2x").css({"color": "#463b3b"});
+    	$(".fa-search").css({"color": "#463b3b"});
     });
 
 });

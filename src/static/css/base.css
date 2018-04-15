@@ -83,10 +83,11 @@ img {
 
 .home-hero {
 	position: relative;
-	background-image: url('../img/wood-cube.jpg');
+	background-image: url('../img/wood-cube-grey.jpg');
 	background-size: cover;
-	background-position: center;
-	height: 18vh;
+	background-position: center bottom;
+	background-attachment: fixed;
+	height: 100vh;
 }
 
 header {
@@ -293,6 +294,9 @@ nav a:hover {
 	color: white;
 }
 
+.articles {
+	min-height: 70vh;
+}
 .bar.artykuly {
 	border-radius: 0px;
 }
@@ -348,9 +352,6 @@ button[type=submit] {
 	right: 0;
 }
 
-button[type=submit]:hover {
-
-}
 
 button.searchbutton {
 	cursor: pointer;
@@ -358,18 +359,24 @@ button.searchbutton {
 	color: white;
 }
 
+#button-ajax:hover {
+	background-color": "#463b3b"
+}
+
 .fa-2x {
 	font-size: 1.7em;
 	color: #463b3b;
+}
+
+
+.noresults {
+	text-align: center;
 }
 
 .article {
 	padding: 2vh 0vh;
 }
 
-.article p {
-	/*white-space: nowrap;*/
-}
 
 .art-title {
 	font-size: 1.3rem;
@@ -435,6 +442,7 @@ a.endless_more  {
 	color: #e8e2db;
 	padding: 0px 13px;
 }
+
 
 .contacts {
 	display: flex;

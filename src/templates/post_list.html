@@ -18,4 +18,7 @@
 		    });
 		</script>
 	{% endfor %}
+	{% if not object_list.first %}
+		<p class="noresults">Brak wyników.</p>
+	{% endif %}
 	{% show_more "Więcej wyników" "ładowanie" %}
