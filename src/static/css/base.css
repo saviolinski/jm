@@ -91,6 +91,10 @@ img {
 	height: 100vh;
 }
 
+.home-hero.subsite {
+	height: 10vh;
+}
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -202,13 +206,8 @@ nav a:hover {
 	grid-template-rows: 1fr;
 	height: 40vh;
 	max-width: 1200px;
-	width: 100%;
 	margin: 0 auto;
-	/*padding: 15.3vh 0vh;*/
-
-
 }
-
 
 .foto {
 	background-image: url('../img/portrait.jpeg');
@@ -311,9 +310,6 @@ hr {
 	color: white;
 }
 
-.articles {
-	/*min-height: 90vh;*/
-}
 .bar.artykuly {
 	border-radius: 0px;
 }
@@ -394,6 +390,7 @@ button.searchbutton {
 
 .article {
 	padding: 3vh 0vh;
+	text-align: justify;
 }
 
 
@@ -412,11 +409,12 @@ button.searchbutton {
 
 .endless_container {
 	display: grid;
+	justify-self: center;
 	align-content: center;
 	position: absolute;
 	bottom: 0;
 	text-align: center;
-	width: 100%;
+	width: 90%;
 	height: 5vh;
 	border-radius: 60px 60px 0px 0px;
 	background-color: #463b3b;
@@ -700,4 +698,17 @@ input.delete-button:hover {
 	background-color: #e44444;
 	border: 2px solid #463b3b;
 	cursor: pointer;
+}
+
+
+/*media queries */
+
+@media (max-width: 1250px) {
+	.container-1 {
+		padding: 0vh 3vw;
+	}
+
+	.article {
+		padding: 2vh 3vw;
+	}
 }
