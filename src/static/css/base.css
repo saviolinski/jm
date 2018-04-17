@@ -82,6 +82,7 @@ img {
 }
 
 .home-hero {
+	display: grid;
 	position: relative;
 	background-image: url('../img/wood-cube-grey.jpg');
 	background-size: cover;
@@ -94,8 +95,9 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 50px;
-	width: 1200px;
+	height: 5.5vh;
+	max-width: 1200px;
+	width: 100%;
 	background-color: #ffffffab;
 	position: absolute;
 	margin-left: auto;
@@ -139,7 +141,7 @@ nav a {
 	padding: .5em;
 	text-transform: uppercase;
 	color: #463b3b;
-	font-size: .9rem;
+	font-size: .85rem;
 }
 
 nav a:hover {
@@ -186,21 +188,23 @@ nav a:hover {
 	/*text-transform: uppercase;*/
 }
 .bar h1 {
-	border-bottom: solid 1px;
-	width: 10vw;
+	/*border-bottom: solid 1px;*/
+	/*width: 10vw;*/
 	margin: 0 auto;
 }
 
 .container-1 {
 	display: grid;
 	text-align: center;
+	align-self: center;
 	align-content: center;
 	grid-template-columns: 1fr 3fr;
 	grid-template-rows: 1fr;
 	height: 40vh;
 	max-width: 1200px;
+	width: 100%;
 	margin: 0 auto;
-	padding: 15.3vh 0vh;
+	/*padding: 15.3vh 0vh;*/
 
 
 }
@@ -210,11 +214,23 @@ nav a:hover {
 	background-image: url('../img/portrait.jpeg');
 	background-size: cover;
 	background-position: center;
-	border-radius: 2%;
+	border-radius: 15px;
 }
 
 .opis {
-	padding: 0vw 6vw;
+	padding: 3vw 4vw;
+	padding-bottom: 2vw;
+	background-color: #ffffffab;
+	margin-left: 3vw;
+    border-radius: 20px;
+}
+.opisik {
+	padding-bottom: 2vh;
+}
+
+hr {
+	width: 75%;
+	color: #463b3b;
 }
 
 .opis h1 {
@@ -234,8 +250,9 @@ nav a:hover {
 
 .container-2 {
 	display: grid;
-	width: 1200px;
-	margin: 10vh auto;
+	max-width: 1200px;
+	width: 100%;
+	margin: 12vh auto;
 	/*margin-bottom: 10vh;*/
 
 }
@@ -247,9 +264,9 @@ nav a:hover {
 }
 
 .bar.pytania h1 {
-	border-bottom: solid 1px;
-	margin: 0 auto;
-	width: 30vw;
+	/*border-bottom: solid 1px;*/
+	/*margin: 0 auto;*/
+	/*width: 30vw;*/
 }
 
 .qa {
@@ -295,7 +312,7 @@ nav a:hover {
 }
 
 .articles {
-	min-height: 70vh;
+	/*min-height: 90vh;*/
 }
 .bar.artykuly {
 	border-radius: 0px;
@@ -304,9 +321,12 @@ nav a:hover {
 .container-3 {
 	position: relative;
 	display: grid;
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
+	min-height: 76vh;
 	margin: 0vh auto;
 	padding-bottom: 12vh;
+	padding-top: 4vh;
 }
 
 .container-3 h5 {
@@ -317,7 +337,6 @@ nav a:hover {
 .searchbar {
 	position: relative;
 	margin: 2vh auto;
-	padding-bottom: 5vh;
 }
 .searchtext-style {
 	position: relative;
@@ -374,7 +393,7 @@ button.searchbutton {
 }
 
 .article {
-	padding: 2vh 0vh;
+	padding: 3vh 0vh;
 }
 
 
@@ -428,33 +447,39 @@ a.endless_more  {
 
 .container-4 {
 	display: grid;
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 	height: 19vh;
 	margin: 0 auto;
 	color: #e8e2db;
 	font-weight: 400;
 	font-size: 0.85rem;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 3fr;
 	grid-template-rows: 1fr;
 }
 
-.ico.fa-2x {
+.ico {
+
+}
+
+.ico.fa-3x {
 	color: #e8e2db;
 	padding: 0px 13px;
 }
 
 
 .contacts {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
 }
 .con-grid {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	justify-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
 	padding: 6px;
-	align-items: center;
 }
 
 .info {
@@ -467,10 +492,14 @@ a.endless_more  {
 	font-size: 1.1rem;
 }
 .logo-ft {
-	padding-bottom: 10px;
-	width: 90px;
-	margin: 0 auto;
+	color: white;
 }
+
+.cont-cont {
+	margin-top: 2vh;
+	font-size: 0.9rem;
+}
+
 .blackbar {
 	width: 100%;
 	height: 2vh;
@@ -490,7 +519,8 @@ box-sizing: border-box;
 } 
 .artykul-content {
 	position: relative;
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 	display: grid;
 	margin: 5vh auto;
 }
@@ -558,7 +588,8 @@ textarea:focus, input:focus{
 }
 
 .container-form {
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 	margin: 0 auto;
 	height: 130vh;
 	text-align: center;
