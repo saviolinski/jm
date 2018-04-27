@@ -4,6 +4,7 @@
 
 	<title>{% block head_title %}Stronka jm{% endblock head_title %}</title>
 	<link rel="stylesheet" href='{% static "/css/base.css" %}' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -74,12 +75,39 @@
 	$(window).scroll(function(){
 		const $heroSection = $('#anch');
 		const $heroOffset = $heroSection.offset().top;
+
 		if($(this).scrollTop()>=$heroOffset){
 			$('.goup').slideDown();
     	} else {
     		$('.goup').slideUp();
     	}
-});
+
+	});
+			
+	$(window).scroll(function(){
+		const scroll = $(this).scrollTop();
+		console.log(scroll);
+		var $header = $('header');
+		var $menu = $('.hamburg');
+
+		if($(this).scrollTop()>=58){
+			// $('header').css({"position": "fixed", "left": "auto", "width": "auto", "border-radius": "0px 0px 0px 25px", "height": "auto"});\
+			$header.addClass('fixed');
+			$header.removeClass('absolute');
+			$('nav').css({"display": "none"});
+			$('.logo').css({"display": "none"});
+			$menu.addClass('visible');
+			// $('.hamburg').css({"display": "inline-block", "padding": "10px"});
+    	} else {
+    		$header.removeClass('fixed');
+    		$header.addClass('absolute');
+    		$('nav').css({"display": "grid"});
+    		$('.logo').css({"display": "flex"});
+    		// $('.hamburg').css({"display": "none", "padding": "0px"});
+    		$menu.removeClass('visible');
+    	}
+
+	});
     
 
 </script>

@@ -111,6 +111,42 @@ header {
 	border-radius: 0px 0px 25px 25px;
 }
 
+header.absolute {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	border-radius: 0px 0px 25px 25px;
+	height: 5.5vh;
+}
+
+header.fixed {
+	position: fixed;
+	left: auto;
+	width: auto;
+	border-radius: 0px 0px 0px 25px;
+	height: auto;
+}
+
+.hamburg {
+	/*display: none;*/
+	position: fixed;
+	right: 0;
+	transform: translateX(30px);
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+.hamburg.visible {
+	transform: translateX(0px);
+	display: inline-block;
+	padding: 10px;
+	visibility: visible;
+	opacity: 1;
+	transition: 0.3s ease;
+}
+
 .logo {
 	font-family: 'Parisienne', cursive;
 	font-size: 1.8rem;
@@ -125,6 +161,8 @@ header {
 
 nav {
 	float: right;
+	display: grid;
+	align-items: center;
 }
 
 nav ul {
@@ -710,5 +748,23 @@ input.delete-button:hover {
 
 	.article {
 		padding: 2vh 3vw;
+	}
+}
+
+@media (max-width: 830px) {
+	nav li {
+		margin: 0.5rem;
+	}
+}
+
+@media (max-width: 650px) {
+	.container-4 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 3fr;
+		height: auto;
+	}
+	.contacts {
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 1fr 1fr 1fr;
 	}
 }
