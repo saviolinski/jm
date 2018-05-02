@@ -34,11 +34,10 @@
 		<div class="bar ftr"></div>
 		<div class="container-4">
 			<div class="info">
-				<a class="logo logo-ft" href="/">Jowita Michalska</a>
+				<a class="logo-ft" href="/">Jowita Michalska</a>
 				<!-- <i class="far fa-comment-alt fa-3x logo-ft"></i> -->
 				<!-- <img src='{% static "/img/logo-light.png" %}' alt="JML logo" class="logo-ft"> -->
 <!-- 				<p class="ft-name">Jowita Michalska</p> -->
-				<p>Logopeda</p>
 			</div>
 			<div class="contacts">
 				<div class="phone con-grid">
@@ -107,6 +106,10 @@
     		$menu.removeClass('visible');
     	}
 
+	});
+
+	$("#headero").click(function(){
+    	$("nav").slideToggle();
 	});
     
 

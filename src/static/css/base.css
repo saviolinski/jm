@@ -109,14 +109,13 @@ header {
 	left: 0;
 	right: 0;
 	border-radius: 0px 0px 25px 25px;
+	z-index: 9;
 }
 
 header.absolute {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	border-radius: 0px 0px 25px 25px;
-	height: 5.5vh;
 }
 
 header.fixed {
@@ -128,10 +127,9 @@ header.fixed {
 }
 
 .hamburg {
-	/*display: none;*/
 	position: fixed;
 	right: 0;
-	transform: translateX(30px);
+	transform: translateX(-10px);
 	top: 0;
 	visibility: hidden;
 	opacity: 0;
@@ -142,9 +140,11 @@ header.fixed {
 	transform: translateX(0px);
 	display: inline-block;
 	padding: 10px;
+	background-color: #e8e2db;
 	visibility: visible;
 	opacity: 1;
 	transition: 0.3s ease;
+	border-radius: 50%;
 }
 
 .logo {
@@ -208,6 +208,7 @@ nav a:hover {
 	border-bottom: none;
 	border-radius: 25px 25px 0 0;
 	cursor: pointer;
+	z-index: 10;
 }
 
 #go-up {
@@ -252,6 +253,10 @@ nav a:hover {
 	background-size: cover;
 	background-position: center;
 	border-radius: 15px;
+}
+
+.warstwa {
+	display: none;
 }
 
 .opis {
@@ -529,6 +534,13 @@ a.endless_more  {
 }
 .logo-ft {
 	color: white;
+	font-family: 'Parisienne', cursive;
+	font-size: 1.8rem;
+	display: flex;
+	width: auto;
+	float: left;
+	align-self: center;
+	text-decoration: none;
 }
 
 .cont-cont {
@@ -755,9 +767,24 @@ input.delete-button:hover {
 	nav li {
 		margin: 0.5rem;
 	}
+	.searchtext-style {
+		width: 60vw;
+	}
+	#search-landing {
+		width: 50vw;
+	}
 }
 
 @media (max-width: 650px) {
+	header {
+		height: 8.5vh;
+	}
+	nav ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
 	.container-4 {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 3fr;
@@ -766,5 +793,53 @@ input.delete-button:hover {
 	.contacts {
 	    grid-template-columns: 1fr;
 	    grid-template-rows: 1fr 1fr 1fr;
+	}
+}
+
+@media (max-width: 550px) {
+
+	.container-1 {
+		grid-template-columns: 1fr;
+    	grid-template-rows: 1fr;
+	}
+	.foto {
+		display: none;
+	}
+	.opis {
+		z-index: 2;
+		position: relative;
+		margin: 0;
+		padding-top: 6vw;
+	}
+
+	.warstwa {
+		display: inline-block;
+		position: absolute;
+		background-image: url('../img/portrait.jpeg');
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -2;
+    	opacity: 0.3;
+    	border-radius: 20px;
+	}
+
+	.opisik {
+		font-size: 15px;
+	}
+	.question {
+		font-size: 16px;
+		height: auto;
+		padding: 5px 5px;
+	}
+	.answer {
+		font-size: 14px;
+	}
+	.container-2 {
+		margin: 5vh auto;
+		min-height: 84vh;
 	}
 }
