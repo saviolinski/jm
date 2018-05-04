@@ -23,7 +23,7 @@
 	}(document, 'script', 'facebook-jssdk'));
 
 	</script>
-	
+	<div id="omnietop"></div>
 	<div class="scroll goup"><i class="fas fa-angle-up fa-2x" id="go-up"></i></div>
 
 	{% block content %}	
@@ -89,28 +89,61 @@
 		var $header = $('header');
 		var $menu = $('.hamburg');
 
-		if($(this).scrollTop()>=58){
-			// $('header').css({"position": "fixed", "left": "auto", "width": "auto", "border-radius": "0px 0px 0px 25px", "height": "auto"});\
-			$header.addClass('fixed');
-			$header.removeClass('absolute');
-			$('nav').css({"display": "none"});
-			$('.logo').css({"display": "none"});
-			$menu.addClass('visible');
-			// $('.hamburg').css({"display": "inline-block", "padding": "10px"});
-    	} else {
-    		$header.removeClass('fixed');
-    		$header.addClass('absolute');
-    		$('nav').css({"display": "grid"});
-    		$('.logo').css({"display": "flex"});
-    		// $('.hamburg').css({"display": "none", "padding": "0px"});
-    		$menu.removeClass('visible');
-    	}
+		if($(this).width() < 650){
+			if($(this).scrollTop()>=58){
+				// $('header').css({"position": "fixed", "left": "auto", "width": "auto", "border-radius": "0px 0px 0px 25px", "height": "auto"});\
+				$header.addClass('fixed');
+				$header.removeClass('absolute');
+				$('nav').css({"display": "none"});
+				// $('.logo').css({"display": "none"});
+				$menu.addClass('visible');
+				$(".hamburg").removeClass("hampad");
+				$(".omniemenu").css({"display": "inline"})
+
+	    	} else {
+	    		$header.removeClass('fixed');
+	    		$header.addClass('absolute');
+	    		$('nav').css({"display": "grid"});
+	    		// $('.logo').css({"display": "flex"});
+	    		// $('.hamburg').css({"display": "none", "padding": "0px"});
+	    		$menu.removeClass('visible');
+	    		$("ul").removeClass('dropdown');
+	    		$(".hamburg").removeClass("hampad");
+	    		$("nav a, nav li").removeClass("widemenu");
+	    		$(".omniemenu").css({"display": "none"})
+	    	}
+
+	    } else {
+	    		$header.removeClass('fixed');
+	    		$header.addClass('absolute');
+	    		$('nav').css({"display": "grid"});
+	    		// $('.logo').css({"display": "flex"});
+	    		// $('.hamburg').css({"display": "none", "padding": "0px"});
+	    		$menu.removeClass('visible');
+	    		$("ul").removeClass('dropdown');
+	    		$(".hamburg").removeClass("hampad");
+	    		$("nav a, nav li").removeClass("widemenu");
+	    		$(".omniemenu").css({"display": "inline"})
+	    	}
 
 	});
+
+	$(document).ready(function() {
+	    if($(window).width() < 650){
+	    	$(".omniemenu").css({"display": "none"});
+	    }
+	});
+
 
 	$("#headero").click(function(){
-    	$("nav").slideToggle();
+		if($(window).scrollTop()>=58){
+			$("ul").addClass('dropdown');
+	    	$("nav").slideToggle();
+	    	$(".hamburg").toggleClass("hampad");
+	    	$("nav a, nav li").addClass("widemenu");
+	    }
 	});
+	
     
 
 </script>

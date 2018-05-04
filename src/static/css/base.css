@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-
+	position: relative;
 }
 ol, ul {
     list-style: none;
@@ -76,6 +76,13 @@ img {
 	background-color: white;
 	z-index: 20;
 }*/
+
+#omnietop {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	top: 0;
+}
 
 .wrapper {
 	display: grid;
@@ -124,10 +131,12 @@ header.fixed {
 	width: auto;
 	border-radius: 0px 0px 0px 25px;
 	height: auto;
+	background-color: #ffffffeb;
 }
 
 .hamburg {
 	position: fixed;
+	background-color: #e8e2db;
 	right: 0;
 	transform: translateX(-10px);
 	top: 0;
@@ -140,7 +149,6 @@ header.fixed {
 	transform: translateX(0px);
 	display: inline-block;
 	padding: 10px;
-	background-color: #e8e2db;
 	visibility: visible;
 	opacity: 1;
 	transition: 0.3s ease;
@@ -572,6 +580,10 @@ box-sizing: border-box;
 	display: grid;
 	margin: 5vh auto;
 }
+.artykul-content p {
+	text-align: justify;
+}
+
 .shrinkbut {
 	position: absolute;
 	margin: auto;
@@ -633,6 +645,10 @@ img {
 textarea:focus, input:focus{
     outline: none;
     border:none;
+}
+
+.article-section {
+	overflow: hidden;
 }
 
 .container-form {
@@ -761,6 +777,21 @@ input.delete-button:hover {
 	.article {
 		padding: 2vh 3vw;
 	}
+	.det-title {
+		padding: 1rem;
+	}
+	.det-timestamp {
+		padding: 1rem;
+	}
+	.artykul-content p {
+		padding: 1rem;
+	}
+	.faq {
+		background-position: right;
+	}
+	.answer {
+		background-color: #ecececf7;
+	}
 }
 
 @media (max-width: 830px) {
@@ -773,17 +804,32 @@ input.delete-button:hover {
 	#search-landing {
 		width: 50vw;
 	}
+	.det-title {
+		text-align: justify;
+		font-size: 1.5rem;
+	}
+	.fb-comments {
+		width: 600px;
+	}
 }
 
 @media (max-width: 650px) {
 	header {
-		height: 8.5vh;
+   		justify-content: center;
 	}
 	nav ul {
+	     padding-right: 0px; 
+	}
+	nav a {
+    	font-size: 1rem;	}
+	.logo {
+		display: none;
+	}
+/*	nav ul {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-	}
+	}*/
 
 	.container-4 {
 		grid-template-columns: 1fr;
@@ -794,10 +840,15 @@ input.delete-button:hover {
 	    grid-template-columns: 1fr;
 	    grid-template-rows: 1fr 1fr 1fr;
 	}
+	.fb-comments {
+		width: 400px;
+	}
 }
 
 @media (max-width: 550px) {
-
+	.bar {
+		height: 8.5vh;
+	}
 	.container-1 {
 		grid-template-columns: 1fr;
     	grid-template-rows: 1fr;
@@ -842,4 +893,39 @@ input.delete-button:hover {
 		margin: 5vh auto;
 		min-height: 84vh;
 	}
+}
+
+@media (max-width: 420px) {
+	nav a {
+    	padding: 0rem;
+	}
+	.opisik {
+   		font-size: 13px;
+	}
+	.fb-comments {
+		width: 300px;
+	}
+}
+
+.dropdown {
+	height: auto;
+    display: grid;
+    padding-top: 70px;
+    text-align: center;
+    width: 140px;
+}
+
+.hampad {
+	right: 10%;
+	background-color: #ffffff00;
+}
+
+.widemenu {
+	font-size: 1.3rem;
+	padding: 0.5rem 0.2rem;
+}
+
+.widemenu:hover {
+	background-color: #f4f2f0;
+	border-radius: 10px;
 }
